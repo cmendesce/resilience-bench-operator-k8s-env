@@ -82,3 +82,8 @@ cat > /etc/default/kubelet << EOF
 KUBELET_EXTRA_ARGS=--node-ip=$local_ip
 ${ENVIRONMENT}
 EOF
+
+# create results folder
+sudo mkdir -p /mnt/data/test-results
+sudo chown -R 12345:12345 /mnt/data/test-results
+sudo chmod -R 777 /mnt/data/test-results
